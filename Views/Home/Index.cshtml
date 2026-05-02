@@ -18,9 +18,14 @@
             <a asp-controller="Home" asp-action="Contacto">Contacto</a>
         </nav>
 
-        <a class="btn-login" asp-controller="Home" asp-action="Contacto">
-            Iniciar sesión
-        </a>
+        <div class="auth-buttons" style="display: flex; gap: 15px;">
+            <a class="btn-login" asp-controller="Home" asp-action="Contacto">
+                Iniciar sesión
+            </a>
+            <a class="btn-login" asp-controller="Home" asp-action="Registro">
+                Registro
+            </a>
+        </div>
     </header>
 
     <!-- CONTENIDO -->
@@ -43,30 +48,53 @@
 </div>
 
 <!-- TARJETAS -->
-<section class="cards">
+<!-- NUEVA SECCIÓN DE CONTENIDO (Fondo Verde) -->
+<section class="info-section">
 
-    <div class="card" onclick="location.href='@Url.Action("Actividades","Home")'">
-        <div class="icon">🌱</div>
-        <h3>Actividades</h3>
-        <p>Diviértete con actividades creativas.</p>
+    <!-- TARJETAS (Ahora sin margen negativo) -->
+    <div class="cards">
+        <div class="card" onclick="location.href='@Url.Action("Actividades","Home")'">
+            <div class="icon">🌱</div>
+            <h3>Actividades</h3>
+            <p>Diviértete con actividades creativas.</p>
+        </div>
+
+        <div class="card" onclick="location.href='@Url.Action("Recursos","Home")'">
+            <div class="icon">🎨</div>
+            <h3>Recursos</h3>
+            <p>Materiales para inspirar tu imaginación.</p>
+        </div>
+
+        <div class="card" onclick="location.href='@Url.Action("Galeria","Home")'">
+            <div class="icon">📷</div>
+            <h3>Galería</h3>
+            <p>Explora creaciones increíbles.</p>
+        </div>
+
+        <div class="card" onclick="location.href='@Url.Action("Contacto","Home")'">
+            <div class="icon">🎒</div>
+            <h3>Para ti</h3>
+            <p>Recomendaciones personalizadas.</p>
+        </div>
     </div>
 
-    <div class="card" onclick="location.href='@Url.Action("Recursos","Home")'">
-        <div class="icon">🎨</div>
-        <h3>Recursos</h3>
-        <p>Materiales para inspirar tu imaginación.</p>
-    </div>
-
-    <div class="card" onclick="location.href='@Url.Action("Galeria","Home")'">
-        <div class="icon">📷</div>
-        <h3>Galería</h3>
-        <p>Explora creaciones increíbles.</p>
-    </div>
-
-    <div class="card" onclick="location.href='@Url.Action("Contacto","Home")'">
-        <div class="icon">🎒</div>
-        <h3>Para ti</h3>
-        <p>Recomendaciones personalizadas.</p>
+    <!-- INFORMACIÓN DE VALOR AÑADIDA -->
+    <div class="platform-benefits">
+        <h2>Un ecosistema para el aprendizaje</h2>
+        <div class="benefits-grid">
+            <div class="benefit">
+                <h3>🧒 Para Niños</h3>
+                <p>Entornos seguros e interactivos que fomentan la curiosidad natural mediante el juego.</p>
+            </div>
+            <div class="benefit">
+                <h3>👨‍👩‍👧 Para Padres</h3>
+                <p>Seguimiento detallado del progreso de tus hijos y herramientas prácticas de acompañamiento.</p>
+            </div>
+            <div class="benefit">
+                <h3>👨‍🏫 Para Profesores</h3>
+                <p>Métricas en tiempo real y recursos adaptables para potenciar la dinámica en el aula.</p>
+            </div>
+        </div>
     </div>
 
 </section>
