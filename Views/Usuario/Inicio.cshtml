@@ -1,37 +1,44 @@
 ﻿@{
     ViewData["Title"] = "Iniciar Sesión";
 }
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="~/css/Inicio.css" />
 
-<link rel="stylesheet" href="~/css/Inicio.css" />
+</head>
+<body>
+    <div class="login-container">
+        <h2>Bienvenido a tu aventura de aprendizaje</h2>
+        <p>Explora. Aprende. Descubre.</p>
 
-<div class="login-container">
-    <h2>Bienvenido a tu aventura de aprendizaje</h2>
-    <p>Explora. Aprende. Descubre.</p>
+        <div class="logo">
+            <img src="/imagenes/imagen_logo.png" alt="Logo EduClick" />
+        </div>
 
-    <div class="logo">
-        <img src="~/images/imagen_logo.png" alt="Logo EduClick" />
+        <form asp-action="Login" method="post">
+
+            <div class="campo">
+                <span class="icono">📧</span>
+                <input type="email" id="email" name="Email" placeholder="Correo electrónico" required />
+            </div>
+
+            <div class="campo">
+                <span class="icono">🔒</span>
+                <input type="password" id="password" name="Password" placeholder="Contraseña" required />
+            </div>
+
+            <button type="submit" class="btn-login">Iniciar sesión</button>
+
+            <div class="extra-options">
+                <a asp-action="ForgotPassword">¿Olvidaste tu contraseña?</a>
+                <span>o</span>
+                <a asp-action="Register">Crear cuenta nueva</a>
+            </div>
+        </form>
+
+        <p class="footer">Tu viaje comienza aquí</p>
     </div>
+</body>
+</html>
 
-    <form asp-action="Login" method="post">
 
-        <div class="campo">
-            <span class="icono">📧</span>
-            <input type="email" id="email" name="Email" placeholder="Correo electrónico" required />
-        </div>
-
-        <div class="campo">
-            <span class="icono">🔒</span>
-            <input type="password" id="password" name="Password" placeholder="Contraseña" required />
-        </div>
-
-        <button type="submit" class="btn-login">Iniciar sesión</button>
-
-        <div class="extra-options">
-            <a asp-action="ForgotPassword">¿Olvidaste tu contraseña?</a>
-            <span>o</span>
-            <a asp-action="Register">Crear cuenta nueva</a>
-        </div>
-    </form>
-
-    <p class="footer">Tu viaje comienza aquí</p>
-</div>
