@@ -1,0 +1,35 @@
+﻿body {
+}
+
+.registro {
+    text-align: center;
+    margin-bottom: 20px;
+    color: navy;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: aliceblue;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
