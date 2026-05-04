@@ -18,7 +18,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Roles()
+    public IActionResult roles ()
     {
         return View("~/Views/Roles/Roles.cshtml");
     }
