@@ -18,14 +18,20 @@
             <a asp-controller="Home" asp-action="Contacto">Contacto</a>
         </nav>
 
-        <a class="btn-login" asp-controller="Home" asp-action="Contacto">
-            Iniciar sesión
-        </a>
+        <div class="auth-buttons" style="display: flex; gap: 15px;">
+            <a class="btn-login" asp-controller="Usuario" asp-action="Inicio">
+                Inicia sesion
+            </a>
+            <a class="btn-login" asp-controller="Home" asp-action="Registro">
+                Registrate
+            </a>
+        </div>
     </header>
 
     <!-- CONTENIDO -->
     <section class="hero-content">
         <h1>
+            EDU CLICK
             Explora tu mundo,<br />
             <span>crea sin límites</span>
         </h1>
@@ -43,30 +49,34 @@
 </div>
 
 <!-- TARJETAS -->
-<section class="cards">
+<!-- NUEVA SECCIÓN DE CONTENIDO (Fondo Verde) -->
+<section class="info-section">
 
-    <div class="card" onclick="location.href='@Url.Action("Actividades","Home")'">
-        <div class="icon">🌱</div>
-        <h3>Actividades</h3>
-        <p>Diviértete con actividades creativas.</p>
-    </div>
+    <!-- TARJETAS (Ahora sin margen negativo) -->
+    <div class="cards">
+        <div class="card" onclick="location.href='@Url.Action("Actividades","Home")'">
+            <div class="icon">🌱</div>
+            <h3>Actividades</h3>
+            <p>Diviértete con actividades creativas.</p>
+        </div>
 
-    <div class="card" onclick="location.href='@Url.Action("Recursos","Home")'">
-        <div class="icon">🎨</div>
-        <h3>Recursos</h3>
-        <p>Materiales para inspirar tu imaginación.</p>
-    </div>
+        <div class="card" onclick="location.href='@Url.Action("Recursos","Home")'">
+            <div class="icon">🎨</div>
+            <h3>Recursos</h3>
+            <p>Materiales para inspirar tu imaginación.</p>
+        </div>
 
-    <div class="card" onclick="location.href='@Url.Action("Galeria","Home")'">
-        <div class="icon">📷</div>
-        <h3>Galería</h3>
-        <p>Explora creaciones increíbles.</p>
-    </div>
+        <div class="card" onclick="location.href='@Url.Action("Galeria","Home")'">
+            <div class="icon">📷</div>
+            <h3>Galería</h3>
+            <p>Explora creaciones increíbles.</p>
+        </div>
 
-    <div class="card" onclick="location.href='@Url.Action("Contacto","Home")'">
-        <div class="icon">🎒</div>
-        <h3>Para ti</h3>
-        <p>Recomendaciones personalizadas.</p>
+        <div class="card" onclick="location.href='@Url.Action("Contacto","Home")'">
+            <div class="icon">🎒</div>
+            <h3>Para ti</h3>
+            <p>Recomendaciones personalizadas.</p>
+        </div>
     </div>
 
 </section>
