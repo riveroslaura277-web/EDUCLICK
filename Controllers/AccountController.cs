@@ -6,9 +6,9 @@ namespace EduClickWeb.Controllers
     {
         // GET: /Account/Register
         [HttpGet]
-        public IActionResult Register();
+        public IActionResult Register()
         {
-            return View()
+            return View();
         }
 
         // POST: /Account/Register
