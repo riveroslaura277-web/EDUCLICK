@@ -1,9 +1,9 @@
 ﻿body {
-    background-image: url('../img/fondo_selva.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('../img/textura.png'), url('../img/fondo_selva.png');
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat;
 }
 
 .login-container {

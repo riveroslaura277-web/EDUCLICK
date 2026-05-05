@@ -6,15 +6,19 @@
 
 /* HERO */
 .hero {
-    position: relative;
     height: 100vh;
-    background: url('/imagenes/fondo.png') no-repeat center bottom;
+    background-image: url("../imagenes/fondo.png");
     background-size: cover;
-    background-attachment: fixed; /* <-- EFECTO PARALLAX (FONDO FIJO) */
-    color: white;
-    padding: 30px;
+    background-position: center;
 }
 
+.info {
+    height: 100vh;
+    background-image: url("../imagenes/fondo_selva.png");
+    background-size: cover;
+    background-position: center;
+}
+    
     /* CAPA OSCURA */
     .hero::before {
         content: "";
