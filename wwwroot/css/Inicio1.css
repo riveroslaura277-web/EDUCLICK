@@ -1,0 +1,135 @@
+﻿body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/imagenes/fondo_INICIO.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    color: #333;
+}
+
+.login-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-left: 80px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(8px);
+    border-radius: 40px;
+    padding: 90px;
+    width:700px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.logo img {
+    width: 310px;
+    margin-bottom: 20px;
+}
+
+.login-box h2 {
+    color: #2E7D32; 
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.login-box p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.icono {
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.remember {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #444;
+}
+
+.btn-login {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+    .btn-login:hover {
+        background-color: #45A049;
+    }
+
+.btn-google {
+    background-color: #DB4437;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+    .btn-google:hover {
+        background-color: #C33D2E;
+    }
+
+.extra-options {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+    .extra-options a {
+        color: #1976D2;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+        .extra-options a:hover {
+            text-decoration: underline;
+        }
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .login-box {
+        width: 100%;
+        max-width: 350px;
+    }
+}
