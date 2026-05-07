@@ -2,10 +2,12 @@
     ViewData["Title"] = "Inicio";
 }
 
-<link rel="stylesheet" href="~/css/site.css" />
+<!-- HERO -->
+<section class="hero">
 
-<div class="hero">
+    <div class="hero-text">
 
+<<<<<<< HEAD
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="logo">🌿 EduClick</div>
@@ -33,53 +35,109 @@
 
     <!-- CONTENIDO -->
     <section class="hero-content">
+=======
+>>>>>>> ed38d7275853432219d15ab0e9b73dc53ac3cecd
         <h1>
-            EDU CLICK
-            Explora tu mundo,<br />
-            <span>crea sin límites</span>
+            Explora, aprende <br />
+            y <span>diviértete</span>
         </h1>
 
         <p>
-            Descubre actividades divertidas, recursos creativos
-            y mucho más para imaginar, aprender y crear.
+            Descubre actividades interactivas,
+            recursos educativos y juegos para aprender cada día.
         </p>
 
-        <a asp-controller="Home" asp-action="Actividades" class="btn-main">
-            Comenzar ahora →
+        <a href="#" class="btn-main">
+            ¡Comenzar aventura! →
         </a>
-    </section>
 
-</div>
-
-<!-- TARJETAS -->
-<!-- NUEVA SECCIÓN DE CONTENIDO (Fondo Verde) -->
-<section class="info-section">
-
-    <!-- TARJETAS (Ahora sin margen negativo) -->
-    <div class="cards">
-        <div class="card" onclick="location.href='@Url.Action("Actividades","Home")'">
-            <div class="icon">🌱</div>
-            <h3>Actividades</h3>
-            <p>Diviértete con actividades creativas.</p>
-        </div>
-
-        <div class="card" onclick="location.href='@Url.Action("Recursos","Home")'">
-            <div class="icon">🎨</div>
-            <h3>Recursos</h3>
-            <p>Materiales para inspirar tu imaginación.</p>
-        </div>
-
-        <div class="card" onclick="location.href='@Url.Action("Galeria","Home")'">
-            <div class="icon">📷</div>
-            <h3>Galería</h3>
-            <p>Explora creaciones increíbles.</p>
-        </div>
-
-        <div class="card" onclick="location.href='@Url.Action("Contacto","Home")'">
-            <div class="icon">🎒</div>
-            <h3>Para ti</h3>
-            <p>Recomendaciones personalizadas.</p>
-        </div>
     </div>
+
+</section>
+
+<!-- CARDS -->
+<section class="cards">
+
+    <!-- Matemáticas -->
+    <div class="card math">
+
+        <img src="~/imagenes/iconoMate.png" alt="Matemáticas" />
+
+        <h3>Matemáticas</h3>
+
+        <p>
+            Aprende números, operaciones
+            y resuelve problemas jugando.
+        </p>
+
+        <a href="#">Explorar →</a>
+
+    </div>
+
+    <!-- Lectura -->
+    <div class="card read">
+
+        <img src="~/imagenes/iconoLectura.png" alt="Lectura" />
+
+        <h3>Lectura</h3>
+
+        <p>
+            Mejora tu comprensión
+            leyendo cuentos y textos.
+        </p>
+
+        <a href="#">Explorar →</a>
+
+    </div>
+
+    <!-- Ciencias -->
+    <div class="card science">
+
+        <img src="~/imagenes/iconoSociales.png" alt="Ciencias" />
+
+        <h3>Ciencias</h3>
+
+        <p>
+            Descubre el mundo
+            que te rodea.
+        </p>
+
+        <a href="#">Explorar →</a>
+
+    </div>
+
+    <!-- Creatividad -->
+    <div class="card creative">
+
+        <img src="~/imagenes/iconoArte.png" alt="Creatividad" />
+
+        <h3>Creatividad</h3>
+
+        <p>
+            Dibuja, pinta y crea
+            cosas increíbles.
+        </p>
+
+        <a href="#">Explorar →</a>
+
+    </div>
+  
+
+    <!-- Retos -->
+    <div class="card challenge">
+
+        <img src="~/imagenes/iconoreto.png" alt="Retos" />
+
+        <h3>Retos</h3>
+
+        <p>
+            Pon a prueba lo que sabes
+            y gana medallas.
+        </p>
+
+        <a href="#">Explorar →</a>
+
+    </div>
+
 
 </section>

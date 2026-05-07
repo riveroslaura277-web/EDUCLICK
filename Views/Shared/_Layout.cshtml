@@ -3,39 +3,72 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - EDUCLICK</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/EDUCLICK.styles.css" asp-append-version="true" />
+
+    <title>@ViewData["Title"] - EduClick</title>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-    <main role="main">
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="~/imagenes/icono.png" alt="Logo EduClick" />
+            <span>EduClick</span>
+        </div>
+
+        <nav class="menu">
+
+            <a asp-controller="Home" asp-action="Index">
+                <i class="fa-solid fa-house"></i>
+                <span>Inicio</span>
+            </a>
+
+            <a asp-controller="Actividades" asp-action="Index">
+                <i class="fa-solid fa-book"></i>
+                <span>Actividades</span>
+            </a>
+
+            <a asp-controller="Recursos" asp-action="Index">
+                <i class="fa-solid fa-box"></i>
+                <span>Recursos</span>
+            </a>
+
+            <a asp-controller="Galeria" asp-action="Index">
+                <i class="fa-solid fa-image"></i>
+                <span>Galería</span>
+            </a>
+
+            <a asp-controller="Home" asp-action="Contacto">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contacto</span>
+            </a>
+
+        </nav>
+
+        <div class="actions">
+
+            <a asp-controller="Usuario" asp-action="Inicio" class="btn login">
+                <i class="fa-solid fa-user"></i>
+                Iniciar sesión
+            </a>
+
+            <a asp-controller="Account" asp-action="Register" class="btn register">
+                <i class="fa-solid fa-user-plus"></i>
+                Registro
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
         @RenderBody()
     </main>
 
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-
-    <!-- FOOTER PROFESIONAL -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3>🌿 EduClick</h3>
-                <p>Imaginación, aprendizaje y creación sin límites.</p>
-            </div>
-            <div class="footer-links">
-                <a href="#">Términos de servicio</a>
-                <a href="#">Política de privacidad</a>
-                <a href="#">Soporte</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2024 - Proyecto Formativo SENA ADSO
-        </div>
-    </footer>
 </body>
 </html>
