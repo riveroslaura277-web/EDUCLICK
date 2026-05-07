@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -10,15 +12,26 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+          rel="stylesheet">
+
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <header class="navbar">
 
         <div class="logo">
+
             <img src="~/imagenes/icono.png" alt="Logo EduClick" />
+
             <span>EduClick</span>
+
         </div>
 
         <nav class="menu">
@@ -29,7 +42,7 @@
             </a>
 
             <a asp-controller="Actividades" asp-action="Index">
-                <i class="fa-solid fa-book"></i>
+                <i class="fa-solid fa-book-open"></i>
                 <span>Actividades</span>
             </a>
 
@@ -73,9 +86,17 @@
 
     </header>
 
+
+    <!-- CONTENIDO -->
     <main>
         @RenderBody()
     </main>
 
+
+    <!-- SCRIPTS -->
+    <script src="~/js/site.js"></script>
+
 </body>
+
 </html>
+

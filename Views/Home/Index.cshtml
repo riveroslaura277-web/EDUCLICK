@@ -5,68 +5,55 @@
 <!-- HERO -->
 <section class="hero">
 
-    <div class="hero-text">
-
-<<<<<<< HEAD
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">🌿 EduClick</div>
-
-        <nav>
-            <a asp-controller="Home" asp-action="Index">Inicio</a>
-            <a asp-controller="Home" asp-action="Actividades">Actividades</a>
-            <a asp-controller="Home" asp-action="Recursos">Recursos</a>
-            <a asp-controller="Home" asp-action="Galeria">Galería</a>
-            <a asp-controller="Home" asp-action="Contacto">Contacto</a>
-        </nav>
+    <div class="hero-overlay"></div>
 
 
-        <div class="auth-buttons" style="display: flex; gap: 15px;">
-            <a class="btn-login" asp-controller="Home" asp-action="Roles">
+        <div class="hero-text">
 
-                Inicia sesion
-            </a>
- 
+            <span class="tag">✨ Plataforma Educativa Infantil</span>
 
-                Registrate
-            <a class="btn-login" asp-controller="Registro" asp-action="Index">
-                Registro
+            <h1>
+                Explora, aprende <br />
+                y <span>diviértete</span>
+            </h1>
 
-            </a>
-        </div>
-    </header>
+            <p>
+                Descubre juegos educativos, videos interactivos,
+                actividades divertidas y herramientas inteligentes
+                diseñadas para niños de primaria.
+            </p>
 
-    <!-- CONTENIDO -->
-    <section class="hero-content">
+            <div class="hero-buttons">
 
+                <a href="#cards" class="btn-main">
+                    ¡Comenzar aventura! 🚀
+                </a>
 
-        <h1>
-            Explora, aprende <br />
-            y <span>diviértete</span>
-        </h1>
+                <a asp-controller="Usuario" asp-action="Inicio" class="btn-secondary">
+                    Iniciar sesión
+                </a>
 
-        <p>
-            Descubre actividades interactivas,
-            recursos educativos y juegos para aprender cada día.
-        </p>
-
-        <a href="#" class="btn-main">
-            ¡Comenzar aventura! →
-        </a>
+            </div>
 
     </div>
 
 </section>
 
+
 <!-- CARDS -->
-<section class="cards">
+<section class="cards-section" id="cards">
 
-    <!-- Matemáticas -->
-    <div class="card math">
+    <div class="section-title">
+        <h2>Áreas de Aprendizaje</h2>
+        <p>Aprende mientras juegas y exploras.</p>
+    </div>
 
-        <img src="~/imagenes/iconoMate.png" alt="Matemáticas" />
+    <div class="cards">
 
-        <h3>Matemáticas</h3>
+        <!-- Matemáticas -->
+        <div class="card math">
+
+            <img src="~/imagenes/iconoMate.png" alt="Matemáticas" />
 
         <p>
             Aprende números, operaciones
@@ -74,74 +61,80 @@
 
         </p>
 
-        <a href="#">Explorar →</a>
+            <p>
+                Aprende números, operaciones
+                y resuelve problemas jugando.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
+
+        <!-- Lectura -->
+        <div class="card read">
+
+            <img src="~/imagenes/iconoLectura.png" alt="Lectura" />
+
+            <h3>Lectura</h3>
+
+            <p>
+                Mejora tu comprensión
+                leyendo cuentos y textos.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
+
+        <!-- Ciencias -->
+        <div class="card science">
+
+            <img src="~/imagenes/iconoSociales.png" alt="Ciencias" />
+
+            <h3>Ciencias</h3>
+
+            <p>
+                Descubre el mundo
+                que te rodea.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
+
+        <!-- Creatividad -->
+        <div class="card creative">
+
+            <img src="~/imagenes/iconoArte.png" alt="Creatividad" />
+
+            <h3>Creatividad</h3>
+
+            <p>
+                Dibuja, pinta y crea
+                cosas increíbles.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
+
+        <!-- Retos -->
+        <div class="card challenge">
+
+            <img src="~/imagenes/iconoreto.png" alt="Retos" />
+
+            <h3>Retos</h3>
+
+            <p>
+                Pon a prueba lo que sabes
+                y gana medallas.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
 
     </div>
-
-    <!-- Lectura -->
-    <div class="card read">
-
-        <img src="~/imagenes/iconoLectura.png" alt="Lectura" />
-
-        <h3>Lectura</h3>
-
-        <p>
-            Mejora tu comprensión
-            leyendo cuentos y textos.
-        </p>
-
-        <a href="#">Explorar →</a>
-
-    </div>
-
-    <!-- Ciencias -->
-    <div class="card science">
-
-        <img src="~/imagenes/iconoSociales.png" alt="Ciencias" />
-
-        <h3>Ciencias</h3>
-
-        <p>
-            Descubre el mundo
-            que te rodea.
-        </p>
-
-        <a href="#">Explorar →</a>
-
-    </div>
-
-    <!-- Creatividad -->
-    <div class="card creative">
-
-        <img src="~/imagenes/iconoArte.png" alt="Creatividad" />
-
-        <h3>Creatividad</h3>
-
-        <p>
-            Dibuja, pinta y crea
-            cosas increíbles.
-        </p>
-
-        <a href="#">Explorar →</a>
-
-    </div>
-  
-
-    <!-- Retos -->
-    <div class="card challenge">
-
-        <img src="~/imagenes/iconoreto.png" alt="Retos" />
-
-        <h3>Retos</h3>
-
-        <p>
-            Pon a prueba lo que sabes
-            y gana medallas.
-        </p>
-
-        <a href="#">Explorar →</a>
-
-    </div>
-
 
 </section>
+
