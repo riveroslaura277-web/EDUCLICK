@@ -1,0 +1,295 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Fredoka+One&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .ec-root { background: linear-gradient(150deg, #e0f7fa 0%, #e8f5f0 50%, #e0f2f1 100%); min-height: 100vh; font-family: 'Nunito', sans-serif; }
+  .topbar { background: linear-gradient(90deg, #4fc3f7, #4db6ac); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: relative; overflow: hidden; }
+  .topbar::after { content: '🌿🍃🌿🍃🌿🍃🌿🍃🌿🍃🌿🍃🌿🍃🌿🍃'; position: absolute; bottom: -2px; left: 0; font-size: 14px; letter-spacing: 2px; opacity: 0.22; }
+  .logo { font-family: 'Fredoka One', cursive; font-size: 26px; color: #fff; display: flex; align-items: center; gap: 8px; }
+  .logo span { background: #fff; color: #4db6ac; border-radius: 8px; padding: 2px 10px; font-size: 18px; }
+  .user-info { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 14px; }
+  .avatar { width: 36px; height: 36px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #4db6ac; font-size: 15px; }
+  .main { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 60px); }
+  .sidebar { background: #29b6c5; padding: 20px 12px; display: flex; flex-direction: column; gap: 4px; }
+  .sidebar-title { font-size: 11px; color: #e0f7fa; text-transform: uppercase; letter-spacing: 1.5px; padding: 8px 12px 4px; font-weight: 700; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 10px; color: #e0f7fa; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; border: none; background: transparent; text-align: left; width: 100%; }
+  .nav-item:hover { background: rgba(255,255,255,0.18); color: #fff; }
+  .nav-item.active { background: #fff; color: #29b6c5; }
+  .badge-new { background: #4db6ac; color: #fff; font-size: 10px; font-weight: 800; border-radius: 20px; padding: 1px 7px; margin-left: 6px; }
+  .content { padding: 24px; overflow-y: auto; }
+  .welcome-banner { background: linear-gradient(90deg, #4fc3f7, #4db6ac); border-radius: 16px; padding: 20px 28px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; }
+  .welcome-banner::before { content: '🌴🌿🦋🌸🍃'; position: absolute; right: 200px; top: 8px; font-size: 22px; opacity: 0.3; }
+  .welcome-text h2 { font-family: 'Fredoka One', cursive; color: #fff; font-size: 22px; margin-bottom: 4px; }
+  .welcome-text p { color: #e0f7fa; font-size: 13px; }
+  .student-chip { background: #fff; border-radius: 30px; padding: 8px 18px; display: flex; align-items: center; gap: 8px; font-weight: 800; color: #29b6c5; font-size: 14px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+  .stat-card { background: #fff; border-radius: 14px; padding: 16px; text-align: center; border: 2px solid transparent; box-shadow: 0 2px 12px rgba(79,195,247,0.13); transition: transform 0.2s; }
+  .stat-card:hover { transform: translateY(-3px); }
+  .stat-card .s-icon { font-size: 28px; margin-bottom: 6px; }
+  .stat-card .s-val { font-family: 'Fredoka One', cursive; font-size: 28px; margin-bottom: 2px; }
+  .stat-card .s-label { font-size: 12px; color: #777; font-weight: 600; }
+  .stat-card.c1 { border-color: #4fc3f7; } .stat-card.c1 .s-val { color: #0288d1; }
+  .stat-card.c2 { border-color: #4db6ac; } .stat-card.c2 .s-val { color: #00796b; }
+  .stat-card.c3 { border-color: #80deea; } .stat-card.c3 .s-val { color: #00838f; }
+  .stat-card.c4 { border-color: #4dd0e1; } .stat-card.c4 .s-val { color: #00696f; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .panel { background: #fff; border-radius: 14px; padding: 18px; box-shadow: 0 2px 12px rgba(77,182,172,0.09); }
+  .panel-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .panel-header h3 { font-family: 'Fredoka One', cursive; color: #29b6c5; font-size: 17px; }
+  .panel-header .ph-icon { font-size: 20px; }
+  .grade-row { display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid #e0f7fa; gap: 8px; }
+  .grade-row:last-child { border-bottom: none; }
+  .subj-badge { width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+  .grade-info { flex: 1; }
+  .grade-info .g-name { font-size: 13px; font-weight: 700; color: #333; }
+  .grade-info .g-period { font-size: 11px; color: #aaa; }
+  .grade-num { font-family: 'Fredoka One', cursive; font-size: 22px; }
+  .g-a { color: #00796b; } .g-b { color: #0288d1; } .g-c { color: #ef5350; }
+  .attend-bar { margin-bottom: 10px; }
+  .attend-label { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; margin-bottom: 4px; color: #555; }
+  .bar-track { height: 10px; border-radius: 20px; background: #e0f7fa; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 20px; background: linear-gradient(90deg, #4fc3f7, #4db6ac); }
+  .bar-fill.warn { background: linear-gradient(90deg, #80deea, #4fc3f7); }
+  .bar-fill.danger { background: #ef5350; }
+  .msg-item { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid #e8f5f0; }
+  .msg-item:last-child { border-bottom: none; }
+  .msg-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; background: #e0f7fa; }
+  .msg-body .m-sender { font-size: 13px; font-weight: 700; color: #00796b; }
+  .msg-body .m-text { font-size: 12px; color: #666; margin-top: 2px; }
+  .msg-body .m-time { font-size: 11px; color: #bbb; margin-top: 2px; }
+  .task-item { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid #e8f5f0; }
+  .task-item:last-child { border-bottom: none; }
+  .task-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .task-info { flex: 1; }
+  .task-info .t-name { font-size: 13px; font-weight: 700; color: #333; }
+  .task-info .t-due { font-size: 11px; color: #aaa; }
+  .task-chip { font-size: 11px; font-weight: 700; border-radius: 20px; padding: 3px 10px; }
+  .chip-pend { background: #e0f7fa; color: #0288d1; }
+  .chip-venc { background: #fce8e8; color: #c62828; }
+  .chip-ok { background: #e0f2f1; color: #00796b; }
+  .pay-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #e8f5f0; }
+  .pay-row:last-child { border-bottom: none; }
+  .pay-row .p-label { font-size: 13px; font-weight: 700; color: #333; }
+  .pay-row .p-sub { font-size: 11px; color: #aaa; }
+  .pay-amount { font-family: 'Fredoka One', cursive; font-size: 18px; color: #00796b; }
+  .pay-status { font-size: 11px; font-weight: 700; border-radius: 20px; padding: 3px 10px; }
+  .ps-ok { background: #e0f2f1; color: #00796b; }
+  .ps-pend { background: #e0f7fa; color: #0288d1; }
+  .full-panel { margin-bottom: 20px; }
+  .profile-card { background: #fff; border-radius: 14px; padding: 20px; box-shadow: 0 2px 12px rgba(77,182,172,0.09); display: flex; align-items: center; gap: 20px; }
+  .profile-avatar { width: 70px; height: 70px; border-radius: 50%; background: #e0f7fa; border: 3px solid #4fc3f7; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+  .profile-info h3 { font-family: 'Fredoka One', cursive; font-size: 20px; color: #29b6c5; margin-bottom: 4px; }
+  .profile-info p { font-size: 13px; color: #666; margin-bottom: 2px; }
+  .profile-tags { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .ptag { font-size: 12px; font-weight: 700; border-radius: 20px; padding: 4px 12px; background: #e0f2f1; color: #00796b; }
+</style>
+
+<div class="ec-root">
+  <div class="topbar">
+    <div class="logo">🐾 EduClik <span>Acudiente</span></div>
+    <div class="user-info">
+      <span>María González</span>
+      <div class="avatar">MG</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="sidebar">
+      <div class="sidebar-title">Menú</div>
+      <button class="nav-item active"><span>🏠</span> Inicio</button>
+      <button class="nav-item"><span>🐯</span> Perfil del estudiante</button>
+      <button class="nav-item"><span>📊</span> Notas</button>
+      <button class="nav-item"><span>📅</span> Asistencia</button>
+      <button class="nav-item"><span>📝</span> Tareas</button>
+      <button class="nav-item"><span>💬</span> Mensajes <span class="badge-new">3</span></button>
+      <button class="nav-item"><span>💳</span> Pagos</button>
+      <div style="margin-top:auto; padding-top:20px;">
+        <button class="nav-item" style="color:#e0f7fa;"><span>🚪</span> Cerrar sesión</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="welcome-banner">
+        <div class="welcome-text">
+          <h2>¡Bienvenida, María! 🌿</h2>
+          <p>Hoy es jueves, 7 de mayo de 2026 · Todo al día con tu acudido</p>
+        </div>
+        <div class="student-chip">🐯 Santiago González · Grado 4°B</div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card c1"><div class="s-icon">📊</div><div class="s-val">4.2</div><div class="s-label">Promedio general</div></div>
+        <div class="stat-card c2"><div class="s-icon">📅</div><div class="s-val">94%</div><div class="s-label">Asistencia</div></div>
+        <div class="stat-card c3"><div class="s-icon">📝</div><div class="s-val">3</div><div class="s-label">Tareas pendientes</div></div>
+        <div class="stat-card c4"><div class="s-icon">💬</div><div class="s-val">3</div><div class="s-label">Mensajes nuevos</div></div>
+      </div>
+
+      <div class="full-panel">
+        <div class="panel">
+          <div class="panel-header"><span class="ph-icon">🐯</span><h3>Perfil del estudiante</h3></div>
+          <div class="profile-card">
+            <div class="profile-avatar">🐯</div>
+            <div class="profile-info">
+              <h3>Santiago González</h3>
+              <p>📚 Grado 4° B &nbsp;·&nbsp; 🏫 I.E. Selva Verde</p>
+              <p>🆔 Código: EC-2024-0341 &nbsp;·&nbsp; 🎂 12 años</p>
+              <div class="profile-tags">
+                <span class="ptag">Jornada mañana</span>
+                <span class="ptag">Sede principal</span>
+                <span class="ptag">Activo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-header"><span class="ph-icon">📊</span><h3>Notas del período</h3></div>
+          <div class="grade-row">
+            <div class="subj-badge" style="background:#e0f7fa;">🔢</div>
+            <div class="grade-info"><div class="g-name">Matemáticas</div><div class="g-period">Período 2</div></div>
+            <div class="grade-num g-b">3.8</div>
+          </div>
+          <div class="grade-row">
+            <div class="subj-badge" style="background:#e0f2f1;">📖</div>
+            <div class="grade-info"><div class="g-name">Lenguaje</div><div class="g-period">Período 2</div></div>
+            <div class="grade-num g-a">4.6</div>
+          </div>
+          <div class="grade-row">
+            <div class="subj-badge" style="background:#e0f7fa;">🌍</div>
+            <div class="grade-info"><div class="g-name">Ciencias Naturales</div><div class="g-period">Período 2</div></div>
+            <div class="grade-num g-a">4.5</div>
+          </div>
+          <div class="grade-row">
+            <div class="subj-badge" style="background:#e8f5f0;">🎨</div>
+            <div class="grade-info"><div class="g-name">Artística</div><div class="g-period">Período 2</div></div>
+            <div class="grade-num g-a">5.0</div>
+          </div>
+          <div class="grade-row">
+            <div class="subj-badge" style="background:#e0f7fa;">🌐</div>
+            <div class="grade-info"><div class="g-name">Inglés</div><div class="g-period">Período 2</div></div>
+            <div class="grade-num g-b">3.5</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header"><span class="ph-icon">📅</span><h3>Asistencia del mes</h3></div>
+          <div class="attend-bar">
+            <div class="attend-label"><span>🐒 Matemáticas</span><span>96%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:96%"></div></div>
+          </div>
+          <div class="attend-bar">
+            <div class="attend-label"><span>🦜 Lenguaje</span><span>100%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+          </div>
+          <div class="attend-bar">
+            <div class="attend-label"><span>🐊 Ciencias</span><span>88%</span></div>
+            <div class="bar-track"><div class="bar-fill warn" style="width:88%"></div></div>
+          </div>
+          <div class="attend-bar">
+            <div class="attend-label"><span>🎨 Artística</span><span>100%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+          </div>
+          <div class="attend-bar">
+            <div class="attend-label"><span>🌍 Inglés</span><span>84%</span></div>
+            <div class="bar-track"><div class="bar-fill warn" style="width:84%"></div></div>
+          </div>
+          <div style="margin-top:12px; background:#e0f7fa; border-radius:10px; padding:10px; font-size:12px; color:#0288d1; font-weight:700; text-align:center;">
+            💧 Asistencia general del mes: <strong>94%</strong> — ¡Muy bien!
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-header"><span class="ph-icon">📝</span><h3>Tareas pendientes</h3></div>
+          <div class="task-item">
+            <div class="task-dot" style="background:#ef5350"></div>
+            <div class="task-info"><div class="t-name">Ejercicios cap. 7 - Mate</div><div class="t-due">⏰ Venció: 5 mayo</div></div>
+            <span class="task-chip chip-venc">Vencida</span>
+          </div>
+          <div class="task-item">
+            <div class="task-dot" style="background:#4fc3f7"></div>
+            <div class="task-info"><div class="t-name">Ensayo ecosistemas</div><div class="t-due">📅 Entrega: 9 mayo</div></div>
+            <span class="task-chip chip-pend">Pendiente</span>
+          </div>
+          <div class="task-item">
+            <div class="task-dot" style="background:#4db6ac"></div>
+            <div class="task-info"><div class="t-name">Vocabulario inglés U3</div><div class="t-due">📅 Entrega: 10 mayo</div></div>
+            <span class="task-chip chip-pend">Pendiente</span>
+          </div>
+          <div class="task-item">
+            <div class="task-dot" style="background:#4db6ac"></div>
+            <div class="task-info"><div class="t-name">Dibujo libre - Artística</div><div class="t-due">✅ Entregado: 4 mayo</div></div>
+            <span class="task-chip chip-ok">Entregado ✓</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header"><span class="ph-icon">💬</span><h3>Mensajes <span class="badge-new">3</span></h3></div>
+          <div class="msg-item">
+            <div class="msg-avatar">🦒</div>
+            <div class="msg-body">
+              <div class="m-sender">Prof. Ana Ruiz · Matemáticas</div>
+              <div class="m-text">Santiago necesita refuerzo en fracciones esta semana...</div>
+              <div class="m-time">Hoy, 8:30 am</div>
+            </div>
+          </div>
+          <div class="msg-item">
+            <div class="msg-avatar">🐘</div>
+            <div class="msg-body">
+              <div class="m-sender">Coordinación académica</div>
+              <div class="m-text">Recuerde la reunión de padres el viernes 10 de mayo...</div>
+              <div class="m-time">Ayer, 3:15 pm</div>
+            </div>
+          </div>
+          <div class="msg-item">
+            <div class="msg-avatar">🦜</div>
+            <div class="msg-body">
+              <div class="m-sender">Prof. Luis M. · Inglés</div>
+              <div class="m-text">Felicitaciones, su hijo mejoró notablemente este período.</div>
+              <div class="m-time">Lun, 11:00 am</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="full-panel">
+        <div class="panel">
+          <div class="panel-header"><span class="ph-icon">💳</span><h3>Estado de pagos</h3></div>
+          <div class="pay-row">
+            <div><div class="p-label">Pensión - Mayo 2026</div><div class="p-sub">Vence: 15 mayo 2026</div></div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span class="pay-amount">$120.000</span>
+              <span class="pay-status ps-pend">Pendiente</span>
+            </div>
+          </div>
+          <div class="pay-row">
+            <div><div class="p-label">Pensión - Abril 2026</div><div class="p-sub">Pagado: 8 abril 2026</div></div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span class="pay-amount">$120.000</span>
+              <span class="pay-status ps-ok">Pagado ✓</span>
+            </div>
+          </div>
+          <div class="pay-row">
+            <div><div class="p-label">Matrícula 2026</div><div class="p-sub">Pagado: 15 enero 2026</div></div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span class="pay-amount">$350.000</span>
+              <span class="pay-status ps-ok">Pagado ✓</span>
+            </div>
+          </div>
+          <div class="pay-row">
+            <div><div class="p-label">Seguro estudiantil</div><div class="p-sub">Pagado: 15 enero 2026</div></div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span class="pay-amount">$45.000</span>
+              <span class="pay-status ps-ok">Pagado ✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
