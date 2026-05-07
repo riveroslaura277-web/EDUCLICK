@@ -5,109 +5,133 @@
 <!-- HERO -->
 <section class="hero">
 
-    <div class="hero-text">
+    <div class="hero-overlay"></div>
 
-        <h1>
-            Explora, aprende <br />
-            y <span>diviértete</span>
-        </h1>
+    <div class="hero-content">
 
-        <p>
-            Descubre actividades interactivas,
-            recursos educativos y juegos para aprender cada día.
-        </p>
+        <div class="hero-text">
 
-        <a href="#" class="btn-main">
-            ¡Comenzar aventura! →
-        </a>
+            <span class="tag">✨ Plataforma Educativa Infantil</span>
+
+            <h1>
+                Explora, aprende <br />
+                y <span>diviértete</span>
+            </h1>
+
+            <p>
+                Descubre juegos educativos, videos interactivos,
+                actividades divertidas y herramientas inteligentes
+                diseñadas para niños de primaria.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#cards" class="btn-main">
+                    ¡Comenzar aventura! 🚀
+                </a>
+
+                <a asp-controller="Usuario" asp-action="Inicio" class="btn-secondary">
+                    Iniciar sesión
+                </a>
+
+            </div>
 
     </div>
 
 </section>
+
 
 <!-- CARDS -->
-<section class="cards">
+<section class="cards-section" id="cards">
 
-    <!-- Matemáticas -->
-    <div class="card math">
-
-        <img src="~/imagenes/iconoMate.png" alt="Matemáticas" />
-
-        <h3>Matemáticas</h3>
-
-        <p>
-            Aprende números, operaciones
-            y resuelve problemas jugando.
-        </p>
-
-        <a href="#">Explorar →</a>
-
+    <div class="section-title">
+        <h2>Áreas de Aprendizaje</h2>
+        <p>Aprende mientras juegas y exploras.</p>
     </div>
 
-    <!-- Lectura -->
-    <div class="card read">
+    <div class="cards">
 
-        <img src="~/imagenes/iconoLectura.png" alt="Lectura" />
+        <!-- Matemáticas -->
+        <div class="card math">
 
-        <h3>Lectura</h3>
+            <img src="~/imagenes/iconoMate.png" alt="Matemáticas" />
 
-        <p>
-            Mejora tu comprensión
-            leyendo cuentos y textos.
-        </p>
+            <h3>Matemáticas</h3>
 
-        <a href="#">Explorar →</a>
+            <p>
+                Aprende números, operaciones
+                y resuelve problemas jugando.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
+
+        <!-- Lectura -->
+        <div class="card read">
+
+            <img src="~/imagenes/iconoLectura.png" alt="Lectura" />
+
+            <h3>Lectura</h3>
+
+            <p>
+                Mejora tu comprensión
+                leyendo cuentos y textos.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
+
+        <!-- Ciencias -->
+        <div class="card science">
+
+            <img src="~/imagenes/iconoSociales.png" alt="Ciencias" />
+
+            <h3>Ciencias</h3>
+
+            <p>
+                Descubre el mundo
+                que te rodea.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
+
+        <!-- Creatividad -->
+        <div class="card creative">
+
+            <img src="~/imagenes/iconoArte.png" alt="Creatividad" />
+
+            <h3>Creatividad</h3>
+
+            <p>
+                Dibuja, pinta y crea
+                cosas increíbles.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
+
+        <!-- Retos -->
+        <div class="card challenge">
+
+            <img src="~/imagenes/iconoreto.png" alt="Retos" />
+
+            <h3>Retos</h3>
+
+            <p>
+                Pon a prueba lo que sabes
+                y gana medallas.
+            </p>
+
+            <a href="#">Explorar →</a>
+
+        </div>
 
     </div>
-
-    <!-- Ciencias -->
-    <div class="card science">
-
-        <img src="~/imagenes/iconoSociales.png" alt="Ciencias" />
-
-        <h3>Ciencias</h3>
-
-        <p>
-            Descubre el mundo
-            que te rodea.
-        </p>
-
-        <a href="#">Explorar →</a>
-
-    </div>
-
-    <!-- Creatividad -->
-    <div class="card creative">
-
-        <img src="~/imagenes/iconoArte.png" alt="Creatividad" />
-
-        <h3>Creatividad</h3>
-
-        <p>
-            Dibuja, pinta y crea
-            cosas increíbles.
-        </p>
-
-        <a href="#">Explorar →</a>
-
-    </div>
-  
-
-    <!-- Retos -->
-    <div class="card challenge">
-
-        <img src="~/imagenes/iconoreto.png" alt="Retos" />
-
-        <h3>Retos</h3>
-
-        <p>
-            Pon a prueba lo que sabes
-            y gana medallas.
-        </p>
-
-        <a href="#">Explorar →</a>
-
-    </div>
-
 
 </section>
+
