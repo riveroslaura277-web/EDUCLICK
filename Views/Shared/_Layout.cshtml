@@ -6,29 +6,21 @@
 
     <title>@ViewData["Title"] - EduClick</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="~/css/site.css" />
 
-    <!-- FONT AWESOME -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <header class="navbar">
 
-        <!-- LOGO -->
         <div class="logo">
-
             <img src="~/imagenes/icono.png" alt="Logo EduClick" />
-
             <span>EduClick</span>
-
         </div>
 
-        <!-- MENU -->
         <nav class="menu">
 
             <a asp-controller="Home" asp-action="Index">
@@ -36,37 +28,36 @@
                 <span>Inicio</span>
             </a>
 
-            <a href="#">
+            <a asp-controller="Actividades" asp-action="Index">
                 <i class="fa-solid fa-book"></i>
                 <span>Actividades</span>
             </a>
 
-            <a href="#">
+            <a asp-controller="Recursos" asp-action="Index">
                 <i class="fa-solid fa-box"></i>
                 <span>Recursos</span>
             </a>
 
-            <a href="#">
+            <a asp-controller="Galeria" asp-action="Index">
                 <i class="fa-solid fa-image"></i>
                 <span>Galería</span>
             </a>
 
-            <a href="#">
+            <a asp-controller="Home" asp-action="Contacto">
                 <i class="fa-solid fa-envelope"></i>
                 <span>Contacto</span>
             </a>
 
         </nav>
 
-        <!-- BOTONES -->
         <div class="actions">
 
-            <a href="#" class="btn login">
+            <a asp-controller="Usuario" asp-action="Inicio" class="btn login">
                 <i class="fa-solid fa-user"></i>
                 Iniciar sesión
             </a>
 
-            <a href="#" class="btn register">
+            <a asp-controller="Account" asp-action="Register" class="btn register">
                 <i class="fa-solid fa-user-plus"></i>
                 Registro
             </a>
@@ -75,7 +66,6 @@
 
     </header>
 
-    <!-- CONTENIDO -->
     <main>
         @RenderBody()
     </main>
