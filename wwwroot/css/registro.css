@@ -1,0 +1,42 @@
+﻿body {
+    background-image: url("/imagenes/fondo_registro.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+.registro {
+    text-align: center;
+    margin-bottom: 20px;
+    color: navy;
+    font-family:'Sans Serif Collection';
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: aliceblue;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

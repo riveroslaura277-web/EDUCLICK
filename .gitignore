@@ -361,7 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+<<<<<<< HEAD
+/wwwroot/css/site.css
+/wwwroot/css/Inicio.css
+=======
 /Controllers/AccountController.cs
 /Controllers/AccountController.cs
 /Controllers/AccountController.cs
 /Controllers/ModulosController1.cs
+>>>>>>> e9ab6ac9f6290c2b7ab4b0ce476c1ff34d5714ed
