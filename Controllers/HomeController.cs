@@ -18,6 +18,10 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Roles()
+    {
+        return View("~/Views/Roles/Roles.cshtml");
+    }
     public IActionResult Privacy()
     {
         return View();
