@@ -137,14 +137,45 @@ body {
     background: #2ecc71;
 }
 
-/* HERO */
 .hero {
+<<<<<<< HEAD
     padding: 40px 80px 10px;
 }
 
 .hero-text {
     width: 50%;
     margin-left: 120px;
+=======
+    position: relative;
+    height: 100vh;
+    background: url('/imagenes/fondo.png') no-repeat center bottom;
+    background-size: cover;
+    background-attachment: fixed; 
+    color: white;
+    padding: 30px;
+}
+
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.2) );
+        z-index: 1;
+    }
+
+    /* CONTENIDO ENCIMA */
+    .hero * {
+        position: relative;
+        z-index: 2;
+    }
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+>>>>>>> origin/yulis
 }
 
     .hero-text h1 {
@@ -164,9 +195,18 @@ body {
         margin-bottom: 25px;
     }
 
+<<<<<<< HEAD
 /* BOTON PRINCIPAL */
+=======
+    .hero-content p {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+>>>>>>> origin/yulis
 .btn-main {
     display: inline-block;
+<<<<<<< HEAD
     background: #1faa3f;
     color: white;
     text-decoration: none;
@@ -177,12 +217,31 @@ body {
 }
 
 /* CARDS */
+=======
+    transition: all 0.3s ease;
+}
+
+    .btn-main:hover {
+        background: #2d6a4f;
+        transform: translateY(-5px) scale(1.05); 
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        color: white;
+    }
+
+
+>>>>>>> origin/yulis
 .cards {
     display: flex;
     justify-content: center;
     gap: 20px;
+<<<<<<< HEAD
     padding: 20px;
     flex-wrap: wrap;
+=======
+    margin-bottom: 60px; 
+    position: relative;
+    z-index: 3;
+>>>>>>> origin/yulis
 }
 
 /* CARD */
@@ -201,12 +260,37 @@ body {
         transform: translateY(-10px);
     }
 
+<<<<<<< HEAD
     /* IMAGEN CARD */
     .card img {
         width: 70px;
         height: 70px;
         object-fit: contain;
         margin-bottom: 12px;
+=======
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+.info-section {
+    background-color: #2b4d3a; 
+    padding: 60px 20px 80px 20px;
+    color: white;
+}
+
+.platform-benefits {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .platform-benefits h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #ffd60a; 
+>>>>>>> origin/yulis
     }
 
     /* TITULO */
