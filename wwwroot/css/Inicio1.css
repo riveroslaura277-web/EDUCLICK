@@ -62,7 +62,7 @@ p {
     font-size: 16px;
 }
 
-/* ===== Campos ===== */
+
 .campo {
     display: flex;
     align-items: center;
@@ -89,7 +89,7 @@ input {
         outline: none;
     }
 
-/* ===== Botones ===== */
+
 .btn-login {
     background: linear-gradient(135deg, #4caf50, #42a5f5);
     color: white;
@@ -128,7 +128,7 @@ input {
         box-shadow: 0 0 15px rgba(219, 68, 55, 0.6);
     }
 
-/* ===== Enlaces ===== */
+
 .extra-options {
     text-align: center;
     margin-top: 20px;
@@ -145,7 +145,7 @@ input {
             text-decoration: underline;
         }
 
-/* ===== Botón volver ===== */
+
 .btn-volver {
     display: inline-block;
     margin-top: 30px;
@@ -184,7 +184,7 @@ input {
         left: 100%;
     }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 768px) {
     .login-container {
         justify-content: center;
