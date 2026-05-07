@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI';
+    background: url('/imagenes/FondoP.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 95%;
+    margin: 15px auto;
+    background: white;
+    border-radius: 30px;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .logo span {
+        font-size: 38px;
+        font-weight: bold;
+        color: #2ecc71;
+    }
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+    .menu a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #222;
+        font-weight: 600;
+        font-size: 15px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    /* ICONOS */
+    .menu i {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    /* COLORES */
+    .menu a:nth-child(1) i {
+        color: #2ecc71;
+    }
+
+    .menu a:nth-child(2) i {
+        color: #9b59b6;
+    }
+
+    .menu a:nth-child(3) i {
+        color: #f39c12;
+    }
+
+    .menu a:nth-child(4) i {
+        color: #3498db;
+    }
+
+    .menu a:nth-child(5) i {
+        color: #27ae60;
+    }
+
+    /* HOVER MENU */
+    .menu a:hover {
+        transform: translateY(-4px);
+    }
+
+    .menu a::after {
+        content: "";
+        width: 0%;
+        height: 4px;
+        background: #2ecc71;
+        position: absolute;
+        bottom: -10px;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    .menu a:hover::after {
+        width: 70%;
+    }
+
+/* BOTONES */
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+
+.login {
+    background: #1976d2;
+}
+
+.register {
+    background: #2ecc71;
+}
+
+.hero {
+<<<<<<< HEAD
+    padding: 40px 80px 10px;
+}
+
+.hero-text {
+    width: 50%;
+    margin-left: 120px;
+=======
+    position: relative;
+    height: 100vh;
+    background: url('/imagenes/fondo.png') no-repeat center bottom;
+    background-size: cover;
+    background-attachment: fixed; 
+    color: white;
+    padding: 30px;
+}
+
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0,0.2) );
+        z-index: 1;
+    }
+
+    /* CONTENIDO ENCIMA */
+    .hero * {
+        position: relative;
+        z-index: 2;
+    }
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+>>>>>>> origin/yulis
+}
+
+    .hero-text h1 {
+        font-size: 65px;
+        line-height: 1.1;
+        color: #145a32;
+        margin-bottom: 20px;
+    }
+
+    .hero-text span {
+        color: #f57c00;
+    }
+
+    .hero-text p {
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 25px;
+    }
+
+<<<<<<< HEAD
+/* BOTON PRINCIPAL */
+=======
+    .hero-content p {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+>>>>>>> origin/yulis
+.btn-main {
+    display: inline-block;
+<<<<<<< HEAD
+    background: #1faa3f;
+    color: white;
+    text-decoration: none;
+    padding: 16px 28px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* CARDS */
+=======
+    transition: all 0.3s ease;
+}
+
+    .btn-main:hover {
+        background: #2d6a4f;
+        transform: translateY(-5px) scale(1.05); 
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        color: white;
+    }
+
+
+>>>>>>> origin/yulis
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+<<<<<<< HEAD
+    padding: 20px;
+    flex-wrap: wrap;
+=======
+    margin-bottom: 60px; 
+    position: relative;
+    z-index: 3;
+>>>>>>> origin/yulis
+}
+
+/* CARD */
+.card {
+    width: 180px;
+    background: #fdfcf6;
+    border-radius: 25px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+    /* HOVER CARD */
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+<<<<<<< HEAD
+    /* IMAGEN CARD */
+    .card img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        margin-bottom: 12px;
+=======
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+.info-section {
+    background-color: #2b4d3a; 
+    padding: 60px 20px 80px 20px;
+    color: white;
+}
+
+.platform-benefits {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .platform-benefits h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #ffd60a; 
+>>>>>>> origin/yulis
+    }
+
+    /* TITULO */
+    .card h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    /* TEXTO */
+    .card p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    /* BOTON CARD */
+    .card a {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+/* COLORES */
+.math h3 {
+    color: #27ae60;
+}
+
+.math a {
+    background: #27ae60;
+}
+
+.read h3 {
+    color: #f57c00;
+}
+
+.read a {
+    background: #f57c00;
+}
+
+.science h3 {
+    color: #1976d2;
+}
+
+.science a {
+    background: #1976d2;
+}
+
+.creative h3 {
+    color: #8e44ad;
+}
+
+.creative a {
+    background: #8e44ad;
+}
+
+.challenge h3 {
+    color: #d4a000;
+}
+
+.challenge a {
+    background: #d4a000;
+}
