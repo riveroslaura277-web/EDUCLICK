@@ -6,13 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-<<<<<<< Updated upstream
-    <None Remove="Views\roless\htmlpage.html" />
-=======
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
->>>>>>> Stashed changes
-  </ItemGroup>
-
-</Project>
+</Project>>
