@@ -2,46 +2,42 @@
     ViewData["Title"] = "Inicio";
 }
 
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">🌿 EduClick</div>
+
+    <nav>
+        <a asp-controller="Home" asp-action="Index">Inicio</a>
+        <a asp-controller="Home" asp-action="Actividades">Actividades</a>
+        <a asp-controller="Home" asp-action="Recursos">Recursos</a>
+        <a asp-controller="Home" asp-action="Galeria">Galería</a>
+        <a asp-controller="Home" asp-action="Contacto">Contacto</a>
+    </nav>
+
+    <div class="auth-buttons">
+
+        <a class="btn-login"
+           asp-controller="Usuario"
+           asp-action="Inicio">
+            Iniciar sesión
+        </a>
+
+        <a class="btn-login"
+           asp-controller="Registro"
+           asp-action="Index">
+            Registrarse
+        </a>
+
+    </div>
+
+</header>
+
 <!-- HERO -->
 <section class="hero">
 
     <div class="hero-text">
 
-<<<<<<< HEAD
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">🌿 EduClick</div>
-
-        <nav>
-            <a asp-controller="Home" asp-action="Index">Inicio</a>
-            <a asp-controller="Home" asp-action="Actividades">Actividades</a>
-            <a asp-controller="Home" asp-action="Recursos">Recursos</a>
-            <a asp-controller="Home" asp-action="Galeria">Galería</a>
-            <a asp-controller="Home" asp-action="Contacto">Contacto</a>
-        </nav>
-
-
-        <div class="auth-buttons" style="display: flex; gap: 15px;">
-            <a class="btn-login" asp-controller="Home" asp-action="Roles">
-
-                Inicia sesion
-            </a>
-<<<<<<< HEAD
-                            <a class="btn-login" asp-controller="Usuario" asp-action="Inicio">
-
-                Registrate
-=======
-            <a class="btn-login" asp-controller="Registro" asp-action="Index">
-                Registro
->>>>>>> origin/yulis
-            </a>
-        </div>
-    </header>
-
-    <!-- CONTENIDO -->
-    <section class="hero-content">
-=======
->>>>>>> ed38d7275853432219d15ab0e9b73dc53ac3cecd
         <h1>
             Explora, aprende <br />
             y <span>diviértete</span>
@@ -126,7 +122,6 @@
         <a href="#">Explorar →</a>
 
     </div>
-  
 
     <!-- Retos -->
     <div class="card challenge">
@@ -143,6 +138,5 @@
         <a href="#">Explorar →</a>
 
     </div>
-
 
 </section>
